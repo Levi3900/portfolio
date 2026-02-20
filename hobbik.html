@@ -9,35 +9,132 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Kovács Levente</title>
+    <!--színek/animációk-->
+    <style>
+        .bg-primary {background-color: rgb(55, 55, 55) !important;}
+        .bg-light {background-color: rgb(175, 175, 175) !important;}
+        body{
+            background-image: url(kepek/bg2.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /*félig chatgpt*/
+        .nav-animation {
+        position: relative;
+        transition: color 0.50s ease;
+
+        }
+
+        .nav-animation::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: var(--bs-light);
+        transition: width 0.50s ease;
+        }
+        .nav-animation:hover::after {width: 100%;}
+    </style>
 </head>
 <body>
     <main class="container">
-        <header>
-            <h1>Portfólió:</h1>
-        </header>
-            <nav class="navbar navbar-expand-sm bg-light">
-                <div class="container-fluid">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Bemutatkozás</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="munkak.html">Munkáim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hobbik.html">Amivel a szabadidőm töltöm...</a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
-        <article>
-            
-        </article>
-        <aside>
+        <div class="rounded-5 shadow-lg mt-5">
+            <header class="mt-2">
+                <h1 class="px-3 pt-2 text-white display-4">Portfólió:</h1>
+                <nav class="navbar navbar-expand-sm shadow-sm ps-4">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-animation text-white" href="index.html">Bemutatkozás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-animation text-white" href="munkak.html">Munkáim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-animation text-white" href="hobbik.html">Amivel a szabadidőm töltöm...</a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+                </header>
+            <div class="row gx-0">
+                <article class="col-7 text-white p-3 pb-5">
+                    <h2>Bemutatkozás, </h2>
+                    <p><b>Kovács Levente</b> vagyok, nagyon érdekel a programozás világa. Nem csak iskolában csinálom, gyakran otthon is szórakozás képpen.<br>Mielőtt egyáltalán eljöttem volna az technikumba ahol jelenleg tanulok is már rendszeresen foglalkoztam vele. Több mint 3 évet jártam logischool órákra ahol megismerhettem a programozás alapjait, és ahol igazán megszerettem. Ezért is a kedvenc tantárgyam, bár jelenleg nem vagyok túl jó, motivált vagyok, hogy minél többet fejlődjek és, hogy minél jobb projekteket <br> adhassak ki a kezem alól. <br>A webprogramozás egy másik dolog amit szeretek csinálni, bár azzal semmi korábbi tapasztalatom nem volt. A HTML világával a jelenlegi technikumomban ismerkedtem meg és szerettem meg. Sajnos nem vagyok a leggyorsabb, de ebben is szeretnék jobb lenni. webprogramozásban ami a legjobban tetszik az a JavaScript, bár még nagyon nem tudtam vele foglalkozni, egy keveset már gyakoroltam azt is:</p>
+                    <p id="szoveg"></p>
+                    <button 
+                        type="button" 
+                        onclick='document.getElementById("szoveg").innerHTML = 
+                        "Ennél azért többet, de tényleg nem tudok sokat"'>
+                        Gomb
+                    </button>
+                    <p>De nem csak a programozás érdekel! Káprázatosnak tartom az elektronika világát is. Elképzelhetetlennek tartom, hogy egy pár elektronikus impulzus működteti az </p>
+                    <h2>Hol tanultam?</h2>
+                    <ul>
+                        <li>
+                            Számalk Szalézi Technikum és Szakgimnázium: 2022-                         
+                            <span class="spinner-border spinner-border-sm"></span>
 
-        </aside>
-        <footer>
-            <p>Kovács Levente</p>
+                        </li>
+                        <li>
+                            Herman Ottó Budaörsi Általános Iskola: 2016-2022
+                        </li>
+                    </ul>
+                    
+                </article>
+
+                <aside class="col-5 pb-5 d-flex justify-content-center align-items-center mt-4">
+                    <img src="kepek/placeholder.jpg" alt="ez nem a végleges kép! még nem tudom mit rakjak ide saját magamat fix nem" class=" img-fluid w-60 rounded-circle border border-0">
+                </aside>
+        </div>
+        </div>
+                <article class="col-12 text-center text-white p-5 mb-5">
+                    <p class="display-4">Miben tudok programozni?</p>
+                    <p pb-5><small>(és mennyire)</small></p>
+                    <div class="progress my-5" style="height: 30px;">
+                        <div class="progress-bar bg-dark" style="width:30%">Python (30%)</div>
+                    </div>
+                    <div class="progress my-5" style="height: 30px;">
+                        <div class="progress-bar bg-dark" style="width:70%">HTML/CSS (ezt a tanárnőre hagyom hogy eldöntse :D)</div>     <!--csak beraktam egy számot a szélességre hogy látható lehessen a szöveg-->
+                    </div>
+                    <div class="progress my-5" style="height: 30px;">
+                        <div class="progress-bar bg-dark" style="width:5%">JS (3%)</div>
+                    </div>
+                    <div class="container rounded-5 shadow-lg mt-5 row">
+                        <div class="col-4">
+                    <p class="pb-5 display-6 text-start">Nyelvek: </p>
+                    <ul class="text-start">
+                            <li>Magyar - Anyanyelv</li>
+                            <li>Angol - C1</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <p class="pb-5 display-6 text-start">Hobbiaim: </p>
+                        <ul class="text-start">
+                            <li>programozás</li>
+                            <li>videó vágás / fotózás</li>
+                            <li>MTB</li>
+                            <li>drónok</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <p class="pb-5 display-6 text-start">Elérhetőségek: </p>
+                        <ul class="text-start">
+                            <li><img src="kepek/insta.png" alt="instagram" width="20px"> kvlevi_</li>
+                            <li><img src="kepek/dc.png" alt="discord" width="20px"> Levente39</li>
+                            <li><img src="kepek/git.png" alt="github" width="20px"> Levi3900</li>
+                            <li><img src="kepek/gmail.png" alt="gmail" width="20px"> Kovlev390@gmail.com</li>
+                        </ul>
+                    </div>
+                </article>
+
+        <footer class="mt-5">
+            <p class="text-center text-white display-6 ">Kovács Levente</p>
         </footer>
     </main>
 
