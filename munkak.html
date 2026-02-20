@@ -9,35 +9,276 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Kovács Levente</title>
+    <!--színek/animációk-->
+    <style>
+        .bg-primary {background-color: rgb(55, 55, 55) !important;}
+        .bg-light {background-color: rgb(175, 175, 175) !important;}
+        body{
+            background-image: url(kepek/bg2.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /*félig chatgpt*/
+        .nav-animation {
+        position: relative;
+        transition: color 0.50s ease;
+
+        }
+
+        .nav-animation::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: var(--bs-light);
+        transition: width 0.50s ease;
+        }
+        .nav-animation:hover::after {width: 100%;}
+    </style>
 </head>
 <body>
     <main class="container">
-        <header>
-            <h1>Portfólió:</h1>
-        </header>
-            <nav class="navbar navbar-expand-sm bg-light">
-                <div class="container-fluid">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Bemutatkozás</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="munkak.html">Munkáim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hobbik.html">Amivel a szabadidőm töltöm...</a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
-        <article>
-            
-        </article>
-        <aside>
+        <div class="rounded-5 shadow-lg mt-5">
+            <header class="mt-2">
+                <h1 class="px-3 pt-2 text-white display-4">Portfólió:</h1>
+                <nav class="navbar navbar-expand-sm shadow-sm ps-4">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-animation text-white" href="index.html">Bemutatkozás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-animation text-white" href="munkak.html">Munkáim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-animation text-white" href="hobbik.html">Amivel a szabadidőm töltöm...</a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+                </header>
+                <div class="row g-4">
+               <article class="col-12 text-white p-3 pb-5">
+  <h2>Munkáim:</h2>
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card rounded-4 shadow-lg bg-transparent text-white border-0">
+        <div class="card-header bg-transparent">Amőba</div>
+        <div class="card-body">
+          <div id="demo1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="kepek/python2.webp" alt="Python" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/tictactoe.png" alt="A játék programja" class="d-block w-100" style="height: 385px;">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/tictactoe2.png" alt="A játék működésben" class="d-block w-100" style="height: 385px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent">
+          Amőba játék pythonban lekódolva amely aktívan válaszol a felhasználó lépéseire.
+        </div>
+        <div class="p-3">
+          <button type="button" class="btn btn-dark btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#gomb1">
+            Mit tanultam?
+          </button>
+          <div id="gomb1" class="collapse mt-2">
+            <ul>
+              <li>Listák működése</li>
+              <li>Indexelés</li>
+              <li><b>Amivel jobb lehetett volna:</b> függvények helyes használata</li>
+              <a href="https://github.com/Levi3900/tictactoefakeAI">Github link</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card rounded-4 shadow-lg bg-transparent text-white border-0">
+        <div class="card-header bg-transparent">Terminál (jelenlegi projekt)</div>
+        <div class="card-body">
+          <div id="demo2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo2" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo2" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="kepek/python2.webp" alt="Python" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/terminal1.png" alt="A program" class="d-block w-100" style="height: 385px;">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/WIP.png" alt="A program működésben" class="d-block w-100" style="height: 385px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent">
+        <p>egy nagyon lebutított terminál, amely majd hozzá lesz köttetve egy weboldalhoz a későbbiekben.</p>
+        </div>
+        <div class="p-3 pt-0">
+          <button type="button" class="btn btn-dark btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#gomb2">
+            Mit tanultam?
+          </button>
+          <div id="gomb2" class="collapse mt-2">
+            <ul>
+              <li>Paraméterek</li>
+              <li>Függvények</li>
+              <li>Dictionary</li>
+              <li>Indexelés</li>
+              <a href="#">Privát projekt (WIP)</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card rounded-4 shadow-lg bg-transparent text-white border-0">
+        <div class="card-header bg-transparent">Torino projekt (Csoportmunka)</div>
+        <div class="card-body">
+          <div id="demo3" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo3" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo3" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo3" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="kepek/html.png" alt="Python" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/torino1.png" alt="A játék programja" class="d-block w-100" style="height: 385px;">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/torino2.png" alt="A játék működésben" class="d-block w-100" style="height: 385px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent">
+          közös projekt a torinóba való kirándulásról. (Az én részem volt Valdocco)
+        </div>
+        <div class="p-3">
+          <button type="button" class="btn btn-dark btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#gomb3">
+            Mit tanultam?
+          </button>
+          <div id="gomb3" class="collapse mt-2">
+            <ul>
+              <li>Együttműködés</li>
+              <li>Animációk</li>
+              <li>méretezést/reszponzivitást sokat gyakorolhattam vele</li>
+            </ul>
+              <a href="https://github.com/ANagyHoHoHoHorgasz/Torino_Projekt">Github link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card rounded-4 shadow-lg bg-transparent text-white border-0">
+        <div class="card-header bg-transparent">Inline Block</div>
+        <div class="card-body">
+          <div id="demo4" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo4" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo4" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo4" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="kepek/html.png" alt="Python" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/inlineblock.png" alt="A játék programja" class="d-block w-100" style="height: 385px;">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/inlineblock2.png" alt="A játék működésben" class="d-block w-100" style="height: 385px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent">
+            Egy weboldal amely egyszerűen elmagyarázza a display: block, inline és inline-block közötti különbséget példákkal.
+        </div>
+        <div class="p-3">
+          <button type="button" class="btn btn-dark btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#gomb4">
+            Mit tanultam?
+          </button>
+          <div id="gomb4" class="collapse mt-2">
+            <ul>
+              <li>Együttműködés</li>
+              <li>Animációk</li>
+              <li>méretezést/reszponzivitást sokat gyakorolhattam vele</li>
+            </ul>
+            <a href="https://github.com/Levi3900/inline_block_projekt">Github link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card rounded-4 shadow-lg bg-transparent text-white border-0">
+        <div class="card-header bg-transparent">Hírportál</div>
+        <div class="card-body">
+          <div id="demo5" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo5" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo5" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo5" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="kepek/html.png" alt="Python" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/2025.png" alt="A játék programja" class="d-block w-100" style="height: 385px;">
+              </div>
+              <div class="carousel-item">
+                <img src="kepek/2025_2.png" alt="A játék működésben" class="d-block w-100" style="height: 385px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent">
+            Első komolyabb csoportmunkám még kilencedikből, több kisebb cikkből áll, a harmadik gombra kattintva látható az egyik.
+        </div>
+        <div class="p-3">
+          <button type="button" class="btn btn-dark btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#gomb5">
+            Mit tanultam?
+          </button>
+          <div id="gomb5" class="collapse mt-2">
+            <ul>
+              <li>Együttműködés</li>
+              <li>Első javascriptemet itt írtam</li>
+              <li>Grid</li>
+              <li>reszponzivitás</li>
 
-        </aside>
-        <footer>
-            <p>Kovács Levente</p>
+            </ul>
+            <a href="https://github.com/Levi3900/csoportmunka_Pisti">Github link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+        <footer class="mt-5">
+            <p class="text-center text-white display-6 ">Kovács Levente</p>
         </footer>
     </main>
 
