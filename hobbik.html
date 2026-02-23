@@ -12,7 +12,8 @@
     <!--színek/animációk-->
     <style>
         .bg-primary {background-color: rgb(55, 55, 55) !important;}
-        .bg-light {background-color: rgb(175, 175, 175) !important;}
+        .bg-dark {background-color: #121212 !important;}
+        .btn-light {background-color: #fff !important;}
         body{
             background-image: url(kepek/bg2.jpg);
             background-repeat: no-repeat;
@@ -69,9 +70,10 @@
                     <p>Egyik kedvenc hobbim még a MTB avagy a terepkerékpárózás. Nem messze tőlünk Érden van egy völgy (fundoklia-völgy), egy nagy felügyeletlen sétány. Mivel általában üres és a pálya tökéletes erre, a tavasz és nyár folyamán rendszeresen járok oda.</p>
                     <h4>Hobbiam:</h4>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Programozás</li>
+                            <li>videójátékok</li>
+                            <li>MTB</li>
+                            <li>videó vágás/fotózás</li>
                         </ul>
                 </article>
                     <aside class="col-7 text-white p-3 pb-5">
@@ -87,16 +89,65 @@
                             <div class="col-12 text-center mt-3">
                             <p class="mb-0">
                                 <p>Háziállatom is van: 2 életképtelen tengermalac. Szeretem őket de nem tudom, hogy éltek ezek túl a Perui dzsungelben. Elvileg ha 25 foknál melegebb van már a hősztrók veszélye is fennállhat.</p>
+                            </div>
                         </div>
-                    </div>
-
                     </aside>
             </div>
+        </div>
+        <div class="rounded-5 shadow-lg mt-5">
+            <div class="row gx-0">
+                <article class="col-5 text-white p-3 pb-5 ">
+                    <div class="bg-dark rounded-4 p-3">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="kepek/spoti.png" alt="" class="w-50">
+                            </div>
+                                <div class="d-flex justify-content-center align-items-center col-8">
+                                    <img src="kepek/album.jpg" alt="We dont trust you album cover" class="img-fluid">
+                                </div>
+                            <div class="col-12 mt-3">
+                                <p>Future, Metro Boomin - Ain't No Love</p>
+                            </div>
+                            <div class="progress mx-auto" style="width: 400px;">
+                                <div class="progress-bar bg-primary" style="width:0%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-transparent d-flex justify-content-center mt-2">
+                            <img src="kepek/backwards.png" alt="" style="width: 30px;" class="me-2">
+                            <audio id="music"><source src="zene/song.mp3" type="audio/mpeg"></audio>
+                            <button class="btn btn-light rounded-circle" onclick="toggleMusic()"> ▶ </button> <!--gomb nem AI-->
+                            <img src="kepek/forward.png" alt="" style="width: 30px;" class="ms-2">
+                        </div>
+                    </div>
+                </article>
+                <aside class="col-7 text-white p-3 pb-5">
+                    <h4>Mit hallgatok?</h4>
+                    <p>Amint a bevezetőnél is említettem, főleg rappet és R&B-t, gondoltam egy példa is jó lehetne, szóval:
+                        <--- ide raktam egyet.
+                    </p>
 
+                </aside>
+            </div>
+
+        </div>
         <footer class="mt-5">
             <p class="text-center text-white display-6 ">Kovács Levente</p>
         </footer>
     </main>
 
 </body>
+    <script>
+        /*chatgpt kód*/
+    const music = document.getElementById("music");
+    music.volume = 0.3; 
+
+    function toggleMusic() {
+        if (music.paused) {
+        music.play();
+        } else {
+        music.pause();
+        }
+
+    }
+    </script>
 </html>
